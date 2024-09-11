@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Articulo del Bosque </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <style>
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: unset;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  img,
+  picture,
+  svg,
+  canvas {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+body{
+    background-color: gainsboro;
+}
+
+/*Le da la separacion de lineas y los centraliza,les aplica un tipo de letro*/
+.Primer
+{
+    width: 60%;
+    margin: 0 auto;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    line-height: 1.7em;/*MArcar el espacio entre lineas */
+
+    
+    
+}
+/*Es el titulo del articulo con su informacion debajo*/
+#titular{
+    border-radius: 12%; /*le da un borde ciruclar a los cuadrados */
+    padding: 30px;
+    padding-top: 60px;
+    margin-left: 60px;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    background-color: rgb(210, 231, 231);
+    font-size: 25px;
+    overflow: auto;
+    border: 5px solid black;
+    
+
+}
+/*La imagen del bosque*/
+#bosque{
+    margin: 50px;
+    padding: 20px;
+    float: right;
+    width: 600px;
+    height: 450px;
+    margin-top: 60px;
+    
+
+    
+    
+}
+/*Es para encerrar la imagen y el titular en un mismo sitio*/
+#Titulo{
+    overflow: auto;
+    
+}
+/*Es todo el texto restante,con su propio estilo de letra*/
+#Cuerpo{
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+
+
+    padding-right: 100px;
+    padding-left: 100px;
+    font-size: 17px;
+    overflow: auto;
+
+}
+
+.linea{
+    float: left;
+    width: 10%;
+    position: absolute;
+}
+
+.Resaltado{
+    font-style: italic ;
+    background-color: wheat;
+    font-weight: bold;
+    
+}
+
+.Bloque{
+    display: inline-block;
+    padding: 10px;
+    margin: 10px;
+    background-color: silver;
+    font-family: Oswald, sans-serif;
+    color: black;
+    padding-bottom: 20px;
+}
+
+.ImgDeMues{
+    width: 350px;
+    height: 300px;
+}
+#ImagenSequia{
+    float: right;
+    border: 2px solid black;
+    margin-left: 10px;
+
+
+
+}
+#ImagenIncendio{
+    float: left;
+    border: 2px solid black;
+    margin-right: 10px;
+}
+#ImagenDesarrollo{
+
+    float: right;
+    border: 2px solid black;
+    margin-left: 10px;
+    margin-bottom: 40px;
+}
+
+
+
+
+
+        </style>
+    </head>
+    <body >
+
+   <div id="ColorFondo"  >
+    <div id = "Titulo" >
+        <img id="bosque" src="https://imagenes.elpais.com/resizer/v2/IJZLUL7K4JABXF2XJ52MKJF3T4.jpg?auth=5f941f49acc7e944690a54b11c19f6da0926b0e044c36ef3776790098d348239&width=980" alt="hombres en el bosque">
+        <div class="Primer" id="titular" >
+
+            
+            <h1>Cómo la innovación forestal protege al planeta</h1>
+            <p>Los bosques cubren más de un tercio de la superficie terrestre del mundo y salvaguardan el planeta y sus seres vivos. El acceso justo y equitativo a las nuevas tecnologías es esencial, especialmente entre las comunidades indígenas que son guardianes de nuestros bosques</p>
+
+
+        </div>
+       
+    </div>
+
+    
+    <div class="Primer" id="Cuerpo">
+
+            <hr width="50%" id ="linea2">
+            <div>             <p class="Bloque" id="Nombre" > <strong >Por:</strong> Angel David Bautista Gomez</p> <p class="Bloque" id="fecha" >11 de septiembre del 2024 </p>
+            </div>
+            <img class="ImgDeMues" id="ImagenSequia" src="https://www.iagua.es/sites/default/files/styles/thumbnail-830x455/public/sequia_portada.jpg?itok=bR3Kqk3f">
+
+            <p>
+                Ante las crecientes amenazas para lograr cumplir los  <mark class="Resaltado">Objetivos de Desarrollo Sostenible para 2030</mark>  , la comunidad mundial se encuentra en una encrucijada. La crisis climática se manifiesta en fenómenos meteorológicos extremos que se vuelven cada vez más frecuentes, como <mark class="Resaltado" >sequías</mark> e <mark class="Resaltado" >inundaciones</mark> . Estos trastornos ambientales exacerban la pobreza,
+                 el hambre, la inseguridad alimentaria y la malnutrición, lo que subraya la necesidad urgente de brindar respuestas rápidas y a gran escala. Sin embargo, en medio de estos desafíos enormes, hay una ola de tecnologías innovadoras que ofrece esperanza. El ingenio humano aún puede allanar el camino hacia un futuro sostenible, y nuestros bosques
+                  están posicionados para desempeñar un papel fundamental en esta transformación.</p>
+
+
+                  <p>Los bosques cubren más de un tercio de la superficie terrestre del mundo y <mark class="Resaltado" >salvaguardan el planeta</mark>  y sus seres vivos. Los medios de vida y la salud de los seres humanos dependen de los bosques: proporcionan alimentos, combustible, fibra, medicamentos, madera y productos forestales no madereros a cientos de millones de personas, y contribuyen 
+                    a regular el clima y los hábitats. Si los bosques se conservan, restauran y emplean de manera sostenible, pueden desempeñar un papel aún mayor en el desarrollo sostenible, por lo que debemos aumentar el potencial de los bosques y los árboles al invertir en tecnologías inclusivas. La ciencia y la tecnología están en el centro de la Agenda 2030 
+                    para el Desarrollo Sostenible, y los gobiernos de todo el mundo deben asumir la prioridad de crear una cultura de innovación.</p>
+
+                    <p>
+                        Las innovaciones forestales, específicamente, ilustran el poder de aunar el ingenio con el uso sostenible de los recursos. De hecho, gracias a los avances científicos, prácticamente todo lo que se puede hacer a partir del petróleo crudo también se puede hacer a partir de materiales que se encuentran en los árboles. Los plásticos biodegradables 
+                        derivados de la madera están reemplazando a los <mark class="Resaltado">plásticos nocivos</mark>  que amenazan la salud del suelo, la calidad del agua y el bienestar humano y animal. Los edificios donde vivimos y trabajamos se construyen cada vez más con madera sostenible y láminas hechas con madera de crecimiento rápido gracias a las nuevas tecnologías. La ropa que vestimos 
+                        ahora puede fabricarse con fibras sostenibles que se obtienen de los árboles. Las baterías, que antes se hacían con materias primas extraídas de la tierra, como el grafito, hoy se fabrican a partir de extracciones de la madera. Hasta los viajes espaciales están adoptando las soluciones que ofrece la madera, y se prevé el lanzamiento de un <mark class="Resaltado" >satélite</mark>  
+                        construido con magnolia a finales de este año, que ayudará a reducir los desechos espaciales, ya que se quemará totalmente al reingresar a la atmósfera de la Tierra.
+                    </p>
+
+                   
+                       <h2>La IA y los drones, una salvación ambiental<hr class="linea">    </h2> 
+
+
+                       <img class="ImgDeMues" id="ImagenIncendio" src="https://static.nationalgeographicla.com/files/styles/image_3200/public/nationalgeographic_2720812.jpg?w=1600&h=1061">
+
+                    <p>
+                        Por otra parte, también están surgiendo nuevas soluciones para acelerar la conservación, la restauración y el uso sostenible de los bosques. Se están revolucionando todos los aspectos del ámbito forestal para proteger nuestros ecosistemas forestales y la biodiversidad de los incendios en los bosques, las plagas y enfermedades, y la deforestación. 
+                        Los <mark class="Resaltado" >incendios forestales</mark> son cada vez más frecuentes e intensos. Por ende, la forma en que respondamos a ellos es de importancia crucial. En la actualidad, los drones pueden detectar y determinar en qué dirección se desplaza un incendio, lo que podría salvar a los bosques de la destrucción inevitable. También pueden identificar la deforestación y 
+                        la degradación al producir imágenes de alta resolución para generar mapas de localización, lo que aumenta la protección contra la tala ilegal y el uso indebido de los bosques.
+                    </p>
+                    
+                    <p>
+                        La inteligencia artificial (IA) está apuntalando los esfuerzos para detener y revertir la deforestación y la degradación. Por ejemplo, la IA puede procesar grandes cantidades de datos en zonas donde se necesita un rastreo forense para controlar y regular el uso de los bosques. Adicionalmente, la IA también tiene un enorme potencial para colaborar en el 
+                        control de plagas y la detección de mamíferos, plantas e invertebrados invasores.
+                    </p>
+                    <p>
+                        El informe <mark class="Resaltado" >El estado de los bosques del mundo 2024</mark>  de la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO), analiza el poder transformador de la innovación en base a las evidencias obtenidas en el sector forestal.
+                    </p>
+                    <p>
+                        La innovación no ocurre en el vacío; requiere de la voluntad, a todo nivel, de asumir riesgos y compartir ideas en todos los sectores de la sociedad. Los gobiernos, las organizaciones internacionales, las empresas, los investigadores y la sociedad civil deben trabajar juntos para asegurar que la innovación se adopte de forma rápida, uniforme y en todas partes.
+                         El acceso justo y equitativo a las nuevas tecnologías es esencial, especialmente a nivel local y entre las comunidades indígenas, ya que sus integrantes son quienes a menudo habitan y son guardianes de nuestros bosques.
+                    </p>
+
+                    <img class="ImgDeMues" id="ImagenDesarrollo" src="https://sds.uanl.mx/wp-content/uploads/2023/11/ods-imagen-scaled-e1701211147441.jpg">
+
+                    <p>
+                        Si queremos cumplir nuestros <mark class="Resaltado">Objetivos de Desarrollo Sostenible para 2030</mark> , debemos continuar invirtiendo en innovación forestal. Esto es clave para la gestión sostenible de los bosques, la mitigación y adaptación al cambio climático, y la mejora de los medios de vida. Al hacerlo, estaremos materializando la visión de crear un mundo mejor para todos, sin dejar a nadie atrás.
+                    </p>
+
+
+    </div>
+
+</div>
+    
+    </body>
+</html>
