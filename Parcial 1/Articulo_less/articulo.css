@@ -1,0 +1,124 @@
+@layer reset {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  body {
+    margin: unset;
+  }
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+  img,
+  picture,
+  svg,
+  canvas {
+    display: block;
+    max-inline-size: 100%;
+    block-size: auto;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+body {
+  background-color: gainsboro;
+}
+/*Le da la separacion de lineas y los centraliza,les aplica un tipo de letro*/
+.Primer {
+  width: 60%;
+  margin: 0 auto;
+  line-height: 1.7em;
+  /*MArcar el espacio entre lineas */
+}
+.Primer p {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-justify: inter-word;
+}
+/*Es el titulo del articulo con su informacion debajo*/
+#titular {
+  border-radius: 12%;
+  /*le da un borde ciruclar a los cuadrados */
+  padding: 30px;
+  padding-top: 60px;
+  margin-left: 60px;
+  margin-top: 70px;
+  margin-bottom: 30px;
+  background-color: #d2e7e7;
+  font-size: 25px;
+  overflow: auto;
+  border: 5px solid black;
+}
+/*La imagen del bosque*/
+#bosque {
+  margin: 50px;
+  padding: 20px;
+  float: right;
+  width: 600px;
+  height: 450px;
+  margin-top: 60px;
+}
+/*Es para encerrar la imagen y el titular en un mismo sitio*/
+#Titulo {
+  overflow: auto;
+}
+/*Es todo el texto restante,con su propio estilo de letra*/
+#Cuerpo {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-right: 2px solid black;
+  border-left: 2px solid black;
+  padding-right: 100px;
+  padding-left: 100px;
+  font-size: 17px;
+  overflow: auto;
+}
+.linea {
+  float: left;
+  width: 10%;
+  position: absolute;
+}
+.Resaltado {
+  font-style: italic ;
+  background-color: wheat;
+  font-weight: bold;
+}
+.Bloque {
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+  background-color: silver;
+  font-family: Oswald, sans-serif;
+  color: blue;
+  padding-bottom: 20px;
+}
+.ImgDeMues {
+  width: 350px;
+  height: 300px;
+}
+#ImagenSequia {
+  float: right;
+  border: 2px solid black;
+  margin-left: 10px;
+}
+#ImagenIncendio {
+  float: left;
+  border: 2px solid black;
+  margin-right: 10px;
+}
+#ImagenDesarrollo {
+  float: right;
+  border: 2px solid black;
+  margin-left: 10px;
+  margin-bottom: 40px;
+}
