@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+table{
+    font-size: 40px;
+    background-color: wheat;
+    width:100vw;
+    
+    
+}
+
+table,td{
+border: 2px solid black;
+border-collapse: collapse;
+}
+tr:nth-child(even){
+    background-color: black;
+    color: aliceblue;
+    
+}
+tbody > tr:hover{
+    background-color: grey;
+    color: black;
+
+}
+
+tbody > tr:active{
+    background-color: green;
+    color: wheat;
+    
+}
+
+@media screen and ( max-width: 500px) {
+
+
+    table,tbody,thead,tr,td{
+        display: block;
+    }
+   
+
+    tbody > tr > td:first-child{
+        background-color: burlywood;
+        color: aquamarine;
+        text-align: center;
+     }
+
+     #Lunes::after{
+        text-align: right;
+        content:" -- Lunes";
+     }
+     #Martes::after{
+
+        content:"  --  Martes";
+     }
+     #Miercoles::after{
+
+        content:"  --  Miercoles";
+     }
+     #Jueves::after{
+
+        content:"  --  Jueves";
+     }
+     #Viernes::after{
+
+        content:"  --  Viernes";
+     }
+     
+
+
+}
+
