@@ -5,7 +5,7 @@
 }
 table{
     font-size: 40px;
-    background-color: wheat;
+    background-color: rgb(252, 247, 237);
     width:100vw;
     
     
@@ -27,11 +27,15 @@ tbody > tr:hover{
 }
 
 tbody > tr:active{
-    background-color: green;
     color: wheat;
+    #Lunes{
+        background-color: aquamarine;
+    }
     
 }
-
+ tbody > #Martes :hover {
+ background-color: black !important;
+}
 @media screen and ( max-width: 500px) {
 
 

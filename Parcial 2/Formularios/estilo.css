@@ -1,0 +1,12 @@
+.Contenedor{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 80%;
+    background-color: rgb(82, 82, 143);
+    border: 3px solid lightblue;
+    border-radius: 2%;
+    color: white;
+}
+.row{
+    padding: 7px;
+}
