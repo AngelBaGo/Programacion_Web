@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+
+        <script src="index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.13.7/underscore-esm-min.js"></script>
+    </head>
+    <body>
+<button type="button" onclick="console.log('hola mundo js')" > boton js</button>
+<button type="button" onclick="PresionBoton()" > Llamar a una funcion</button>
+
+
+        <script>
+            window.onload = function (){
+            console.log("Hola mundo desde el body");
+            }
+
+            function nombreFuncion(a,b){
+                return 0;
+            }
+            function PresionBoton(){
+                _.size([1, 2, 3, 4, 5]);
+            }
+        </script>
+    </body>
+</html>
