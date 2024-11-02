@@ -14,22 +14,22 @@
 
             <div class="Contenedor">
                 <h1>Registro</h1>
-                <form action="#" method="post" enctype="application/x-www-form-urlencoded" class="row g-3 mt-3">
+                <form id="crear" action="#" method="post" enctype="application/x-www-form-urlencoded" class="row g-3 mt-3">
 
                     <div class="col-12">     
 
-                        <label for="nom" class="form-label">Nombre</label>
+                        <label for="nom" class="form-label">Nombre de usuario</label>
                         <input type="text" name="Nombre" id="nom" class="form-control">
                     </div>
                   
                     <div class="col-6">
-                        <label for="apeP" class="form-label">Apellido Paterno</label>
+                        <label for="apeP" class="form-label">Nombre(s)</label>
                         <input type="text" name="ApellidoP" id="apeP" class="form-control">
 
                        
                     </div>
                     <div class="col-6">
-                        <label for="apeM" class="form-label">Apellido Materno</label>
+                        <label for="apeM" class="form-label">Apellidos</label>
                         <input type="text" name="ApellidoM" id="apeM" class="form-control">
 
                     </div>
@@ -39,7 +39,7 @@
                 
                     <div class="input-group mt-3 mb-3">
                         <span class="input-group-text" id="basic-addon1">@</span>
-                        <input type="email" class="form-control" placeholder="Correo electronico" aria-label="Username" aria-describedby="basic-addon1">
+                        <input id="Correo" type="email" class="form-control" placeholder="Correo electronico" aria-label="Username" aria-describedby="basic-addon1">
                       </div>
                 </div>
 
@@ -75,31 +75,31 @@
                     <select class="form-select" aria-label="Default select example">
                         <option selected>Selecciona tu pais</option>
                         <option value="1">Mexico</option>
-                        <option value="2">Vinland</option>
-                        <option value="3">Marte</option>
+                        <option value="2">Venezuela</option>
+                        <option value="3">Cuba</option>
                       </select>
                 </div>
 
                 <div class="col-12">
-                    <h3>Elije tus modificaciones</h3>
+                    <h3>Cuales son tus preferencias de noticias</h3>
                     <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" value="" id="Mejoras">
                         <label class="form-check-label" for="Mejoras">
-                          Mejoras Ciberneticas
+                          Naturaleza
                         </label>
                       </div>
 
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" value="" id="supersoldado" >
                         <label class="form-check-label" for="supersoldado">
-                          Inyeccion del supersoldado
+                          Deportes
                         </label>
                       </div>
 
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="checkbox" value="" id="fe" >
                         <label class="form-check-label" for="Fe">
-                          Solo necesito mi fe en el emperador
+                          Economia
                         </label>
                       </div>
 
@@ -108,17 +108,38 @@
                 <div class="col-12 ">
                     <button type="submit" class="btn btn-primary mt-4 mb-3">Subir datos</button>
                 </div>
-                
-
-
-
-                    
-                
-                 </form>
-
-                 
+                                
+                 </form> 
             </div>
  
         
     </body>
+    <script>
+    const form = document.getElementById('crear');
+
+form.addEventListener('submit', (event) => {
+  let valido = true;
+  const nombre = document.getElementById('Nombre').value;
+  const email = document.getElementById('Correo').value;
+  
+
+  if (nombre.trim() === '') {
+    valido = false;
+    document.getElementById('nameError').textContent = 'Se requiere de un hombre.';
+  } else {
+    document.getElementById('nameError').textContent = '';
+  }
+  
+  if (!email.includes('@')) {
+    valido = false;
+    document.getElementById('emailError').textContent = 'El correo no es correcto.';
+  } else {
+    document.getElementById('emailError').textContent = '';
+  }
+  
+  if (!valido) {
+    event.preventDefault();
+  }
+});
+    </script>
 </html>
