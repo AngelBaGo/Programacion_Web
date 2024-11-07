@@ -1,5 +1,7 @@
 const publicKey = 'cabb89eb3a6473f6e9ae270fac2cff8f';
 const privateKey = '297caa6d6f10014b1af59099cd3743184e8848f4';
+
+
 document.getElementById('btnbuscar').addEventListener("click",() =>{
 // Generar timestamp y hash
 const ts = Date.now().toString();
@@ -79,7 +81,6 @@ function fetchComics(Peronsaje_ID) {
 
 
 document.getElementById('btnbuscarAW').addEventListener("click", async() =>{
-    console.log("hola");
     // Generar timestamp y hash
     const ts = Date.now().toString();
     const hash = CryptoJS.MD5(ts + privateKey + publicKey).toString(); // Generar el hash
