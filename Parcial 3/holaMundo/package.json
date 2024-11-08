@@ -1,0 +1,23 @@
+{
+  "name": "programacion_web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngelBaGo/Programacion_Web.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AngelBaGo/Programacion_Web/issues"
+  },
+  "homepage": "https://github.com/AngelBaGo/Programacion_Web#readme",
+  "keywords": [],
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.1"
+  }
+}
