@@ -1,17 +1,11 @@
 const express = require('express');
 const app = express();
 
-app.use(
-    (req,res,next) =>{next()},
-    (req,res,next) =>{next()},
-    (req,res,next) =>{next()}
-    //res.send()
-    //next()
-);
 //Es una froma de convertir datos
 //Si trae json lo que nos este mandando el servidor
 app.use(express.json());
 //Esto es si trae texto
+//Esto es para que agarre el texto del body
 app.use(express.text());
 
 app.get('/administrativos',(req,res) =>{
@@ -31,11 +25,6 @@ app.get('/estudiante/:carrera',(req,res) =>{
     res.send('Servidor peticion get')
 });
 
-
-
-
-
-
 app.post('/empleado',(req,res) =>{
     res.send('Servidor Express contestando la peticion POST')
 });
@@ -43,8 +32,6 @@ app.post('/empleado',(req,res) =>{
 app.all('/empleado',(req,res) =>{
     res.send('Ruta no encontrada')
 })
-
-
 
 app.get('/', (req, res) => {
  res.send('Servidor Express contestando')
