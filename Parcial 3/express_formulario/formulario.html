@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+    <form id="form1">
+        <label for="nombre">Nombre</label>
+        <input id="nombre" name="nombre" type="text">
+
+        <label for="Apellido">Apellido</label>
+        <input id="Apellido" name="apellido" type="text">
+
+        <label for="Edad">Edad</label>
+        <input id="Edad" name="Edad" type="text">
+
+        <label for="archivo">Archivo</label>
+        <input id="archivo" name="archivo" type="file" >
+
+        <button id="Terminado"  type="click">Generar PDF</button>
+    </form>
+
+    <script>
+        document.getElementById('Terminado').addEventListener('click', async (event) => {
+            event.preventDefault(); // Evitar que el formulario recargue la página
+    
+            // Captura los datos del formulario
+        const nombre = document.getElementById('nombre').value.trim();
+        const apellido = document.getElementById('Apellido').value.trim();
+        const Edad = document.getElementById('Edad').value.trim();
+        if (!nombre || !apellido || !Edad) {
+            alert('Todos los campos son obligatorios.');
+            return;
+        }
+
+        const datos = { nombre, apellido, Edad };
+    
+            try {
+                // Envía los datos al servidor
+                const response = await fetch('http://localhost:8082/formularioBase', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(datos), 
+                });
+    
+                if (!response.ok) {
+                    throw new Error('Error en la solicitud');
+                }
+                const blob = await response.blob();
+
+// Crear una URL para el blob y abrir el PDF en una nueva pestaña
+                const url = URL.createObjectURL(blob);
+                window.open(url, '_blank');
+            } catch (error) {
+                console.error('Hubo un error:', error);
+            }
+        });
+    </script>
+    
+</body>
+</html>

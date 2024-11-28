@@ -24,7 +24,8 @@ app.post('/formulario',(req,res) =>{
     //console.log(req.query)
     //res.send('Servidor peticion get')
     console.log(req.body);
-    
+  
+
     res.send(`hola ${req.body.nombre} `)
     //res.render('admin')
 });

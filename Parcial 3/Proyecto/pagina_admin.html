@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <form id="form1">
+        <h2>Registrar Animal</h2>
+
+        <label for="nombre_animal">Nombre del animal:</label>
+        <input type="text" id="nombre_animal" name="nombre_animal" required><br><br>
+      
+        <label for="sexo">Sexo:</label>
+        <select id="sexo" name="sexo" required>
+          <option value="M">Macho</option>
+          <option value="F">Hembra</option>
+        </select><br><br>
+      
+        <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
+      
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" name="peso" step="0.1" required><br><br>
+      
+        <label for="especie">Especie:</label>
+        <select id="especie" name="especie" required>
+          <!-- Aquí cargarías las especies existentes desde la base de datos -->
+          <option value="1">León</option>
+          <option value="2">Tigre</option>
+          <option value="3">Elefante</option>
+        </select><br><br>
+      
+        <label for="recinto">Recinto:</label>
+        <select id="recinto" name="recinto" required>
+          <!-- Aquí cargarías los recintos disponibles desde la base de datos -->
+          <option value="1">Recinto A</option>
+          <option value="2">Recinto B</option>
+        </select><br><br>
+      
+        <label for="estado_salud">Estado de salud:</label>
+        <select id="estado_salud" name="estado_salud" required>
+          <option value="1">Saludable</option>
+          <option value="2">Enfermo</option>
+        </select><br><br>
+      
+        <button type="submit">Registrar Animal</button>
+    </form>
+
+    <form id="form1">
+
+        <h2>Registrar Recinto</h2>
+      
+        <label for="nombre_recinto">Nombre del recinto:</label>
+        <input type="text" id="nombre_recinto" name="nombre_recinto" required><br><br>
+      
+        <label for="tipo_recinto">Tipo de recinto:</label>
+        <select id="tipo_recinto" name="tipo_recinto" required>
+          <option value="Jaula">Jaula</option>
+          <option value="Acuario">Acuario</option>
+          <option value="Área abierta">Área abierta</option>
+        </select><br><br>
+      
+        <label for="capacidad_maxima">Capacidad máxima:</label>
+        <input type="number" id="capacidad_maxima" name="capacidad_maxima" required><br><br>
+      
+        <label for="condiciones_ambientales">Condiciones ambientales:</label>
+        <textarea id="condiciones_ambientales" name="condiciones_ambientales" rows="4" required></textarea><br><br>
+      
+        <label for="responsable">Responsable del recinto:</label>
+        <input type="text" id="responsable" name="responsable" required><br><br>
+      
+        <button type="submit">Registrar Recinto</button>
+      </form>
+
+      <form id="form1">
+        <h2>Actualizar Estado de Salud</h2>
+      
+        <label for="animal">Seleccionar Animal:</label>
+        <select id="animal" name="animal" required>
+          <!-- Aquí cargarías los animales existentes desde la base de datos -->
+          <option value="1">León1</option>
+          <option value="2">Tigre1</option>
+        </select><br><br>
+      
+        <label for="estado_salud">Estado de salud:</label>
+        <select id="estado_salud" name="estado_salud" required>
+          <option value="1">Saludable</option>
+          <option value="2">Enfermo</option>
+          <option value="3">En tratamiento</option>
+        </select><br><br>
+      
+        <label for="comentarios">Comentarios (opcional):</label>
+        <textarea id="comentarios" name="comentarios" rows="4"></textarea><br><br>
+      
+        <button type="submit">Actualizar Estado de Salud</button>
+      </form>
+
+      <form id="form1">
+        <h2>Registrar Especie</h2>
+      
+        <label for="nombre_especie">Nombre de la especie:</label>
+        <input type="text" id="nombre_especie" name="nombre_especie" required><br><br>
+      
+        <label for="familia">Familia:</label>
+        <input type="text" id="familia" name="familia" required><br><br>
+      
+        <label for="clase">Clase:</label>
+        <input type="text" id="clase" name="clase" required><br><br>
+      
+        <label for="dieta">Dieta:</label>
+        <input type="text" id="dieta" name="dieta" required><br><br>
+      
+        <label for="informacion_habitat">Información sobre hábitat:</label>
+        <textarea id="informacion_habitat" name="informacion_habitat" rows="4" required></textarea><br><br>
+      
+        <button type="submit">Registrar Especie</button>
+      </form>
+
+
+      <h1>Lista de Productos</h1>
+      <ul id="lista-productos"></ul>  
+
+
+
+
+
+
+
+    <script>
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const response = await fetch('http://localhost:8082/animal');
+
+        if (!response.ok) {
+            throw new Error('Error al obtener los productos');
+        }
+
+        const productos = await response.json();
+
+        // Mostrar los productos en la consola o en la página
+        console.log(productos);
+
+        const lista = document.getElementById('lista-productos');
+        productos.forEach(producto => {
+            const item = document.createElement('li');
+            item.textContent = `${producto.Nombre} - ${producto.Sexo}`;
+            lista.appendChild(item);
+        });
+    } catch (error) {
+        console.error('Error:', error);
+    }
+});
+
+
+        document.getElementById('form1').addEventListener('submit', async (event) => {
+            event.preventDefault(); // Evitar que el formulario recargue la página
+    
+            // Captura los datos del formulario
+            const formData = new FormData(event.target);
+    
+            try {
+                // Envía los datos al servidor
+                const response = await fetch('http://localhost:8082/formulario', {
+                    method: 'POST',
+                    body: formData
+                });
+    
+                if (!response.ok) {
+                    throw new Error('Error en la solicitud');
+                }
+                const blob = await response.blob();
+
+// Crear una URL para el blob y abrir el PDF en una nueva pestaña
+                const url = URL.createObjectURL(blob);
+                window.open(url, '_blank');
+            } catch (error) {
+                console.error('Hubo un error:', error);
+            }
+        });
+    </script>
+    
+</body>
+</html>
